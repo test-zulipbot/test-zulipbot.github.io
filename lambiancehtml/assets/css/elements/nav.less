@@ -1,0 +1,194 @@
+/* --------------------------------------------
+
+10: Homepage navigation (scrolling strokes)
+
+----------------------------------------------- */
+.strokes{
+	z-index: @z-index-content;
+	overflow-y: scroll;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	@media @mq-tablet-landscape{
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+
+	@media @mq-desktop {
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		white-space: nowrap;
+
+		li{
+			width: 100vw;
+			height: 25vh;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+
+			a{
+				.transition(background-color .4s @animation-bezier);
+				display: block;
+				height: 100%;
+				color: @color-strokes-text-idle;
+				text-decoration: none;
+
+				section{
+					.transform(translateY(-50%));
+
+					position: relative;
+					top: 50%;
+
+					h1{
+						.font-size(24);
+						letter-spacing: 0;
+					}
+
+					h5 {
+						font-family: @font-serif;
+						line-height: 1em;
+						margin-bottom: .1em;
+					}
+
+					* > {
+						margin-top: 0;
+					}
+				}
+
+				footer{
+					.bb();
+					text-align: center;
+					display: none;
+					padding: 40px;
+					position: absolute;
+					width: 100%;
+					bottom: 0;
+
+					h5{
+						margin: 0;
+						letter-spacing: 0;
+					}
+
+					p{
+						.font-size(13);
+						margin: 0;
+						text-align: center;
+					}
+				}
+			}
+
+			h6{
+				font-weight: 100;
+				letter-spacing: 1px;
+				opacity: .7;
+			}
+			
+			@media @mq-phone-landscape{
+				height: 35vh;
+			}
+
+			@media @mq-tablet-landscape, @mq-desktop{
+				display: inline-block;
+				width: 25vw;
+				height: 100vh;
+			}
+
+			@media @mq-desktop {
+				a{
+					background-color: rgba(0, 0, 0, 0);
+
+					section{
+						*{
+							.transition(all .5s @animation-bezier);
+							.backface-visibility(hidden);
+							opacity: 0;
+						}
+
+						h5{
+                            .font-smoothing();
+							.transform(translateY(-30px));
+						}
+
+						h1{
+							.font-size(28);
+							opacity: 1;
+						}
+					}
+
+					footer{
+						.transition(all .4s @animation-bezier);
+						.transform(translateY(100%));
+
+						display: block;
+
+						h5{
+							color: @color-secondary;
+							letter-spacing: 0;
+						}
+
+						.icon{
+							.transform(none);
+							transition-delay: .3s;
+
+							&:before {
+								.font-size(40);
+							}
+						}
+					}
+
+					&:hover{
+
+						background-color: @color-background-strokes;
+                        color: @color-strokes-text-hover;
+
+						section{
+							*{
+								opacity: 1;
+							}
+
+							h1{
+								opacity: 1;
+							}
+
+							h5{
+								.transform(translateY(0));
+								opacity: 1;
+							}
+						}
+
+						footer{
+							.transform(translateY(0));
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+&.always-show-logo{
+	.strokes{
+		top: 10%;
+
+        @media @mq-phone-landscape {
+            top: 15%;
+        }
+        
+        @media @mq-tablet {
+            top: 7%;
+        }
+
+		@media @mq-tablet-landscape, @mq-desktop{
+			top: 0;
+		}
+	}
+}

@@ -1,0 +1,89 @@
+/* --------------------------------------------
+
+15: The background slideshow
+
+----------------------------------------------- */
+#slideshow{
+	.reset-list();
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: @z-index-background;
+
+	li{
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+        opacity: 0;
+        z-index: 0;
+
+		&.visible{
+
+			/* 15.1: The fade animation */
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				15%{
+					opacity: 1;
+				}
+				100% {
+					opacity: 1;
+					.transform(scale(1.2));
+				}
+			}
+			@-moz-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				15%{
+					opacity: 1;
+				}
+				100% {
+					opacity: 1;
+					.transform(scale(1.2));
+				}
+			}
+			@-o-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				15%{
+					opacity: 1;
+				}
+				100% {
+					opacity: 1;
+					.transform(scale(1.2));
+				}
+			}
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+                15%{
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 1;
+                    .transform(scale(1.2));
+                }
+            }
+
+            .animation-name(fadeIn);
+            .animation-duration(9s);
+            .animation-timing-function(linear);
+            .animation-iteration-count(1);
+		}
+
+		img{
+			display: none;
+		}
+	}
+}

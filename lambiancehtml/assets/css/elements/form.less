@@ -1,0 +1,230 @@
+/* --------------------------------------------
+
+8: Forms / inputs and buttons
+
+-----------------------------------------------
+
+8.1: Define placeholder color
+*/
+.placeholder(@color-form-placeholder);
+
+/* 8.2: Define form class and elements belonging to .form */
+.form{
+	text-align: left;
+	margin-top: 35px;
+
+	header{
+		text-align: center;
+	}
+
+	form{
+		margin: auto;
+		padding-top: 10px;
+
+		@media @mq-tablet, @mq-tablet-landscape, @mq-desktop{
+			width: 500px;
+		}
+
+		label{
+			.font-size(12);
+			.font-smoothing();
+			color: @color-secondary;
+			text-transform: uppercase;
+			margin-top: 8px;
+			display: block;
+		}
+	}
+}
+
+/* 8.3: Inline forms with floating elements and rows */
+.form-inline{
+
+	&.contact {
+		.row {
+			margin: 0;
+		}
+
+		.form-group {
+			padding: 0;
+		}
+	}
+
+    @media @mq-tablet, @mq-desktop {
+
+        overflow: hidden;
+
+        form{
+            .row{
+                overflow: hidden;
+                .form-group{
+                    width: 48%;
+                    float: left;
+                    margin: 1%;
+
+                    input{
+                        margin: 0;
+                    }
+                }
+            }
+
+            textarea, .message{
+                width: 98%;
+                margin: 1% auto;
+            }
+        }
+
+    }
+}
+
+/* 8.4: Form inputs styling */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"]{
+
+	.bb();
+	.font-smoothing();
+	.font-size(16);
+	.transition(all .5s);
+
+	font-family: inherit;
+	padding: 15px 50px 15px 20px;
+	display: block;
+	width: 100%;
+	border: none;
+	background: none;
+	color: @color-primary;
+    border: 2px solid @color-text-primary;
+	-webkit-appearance: none;
+    margin: 10px 0;
+
+	&:focus {
+		outline: 0;
+		outline: thin dotted \9; /* IE6-9 */
+		outline: none;
+	}
+}
+
+/* 8.5: Form-group - Input with icon styling */
+.form-group{
+
+	position: relative;
+	margin-bottom: 1px;
+
+	i{
+		.transform(translateY(-50%));
+		position: absolute;
+		right: 20px;
+		top: 26px;
+
+		&:before{
+            .transition(color .4s);
+			.font-size(24);
+			color: @color-primary;
+		}
+	}
+}
+
+/* 8.6: Textarea styling */
+textarea{
+	line-height: 1.5;
+	resize: vertical;
+}
+
+/* 8.7: Submit button styling */
+.submit{
+    text-align: center;
+
+    button{
+
+        .hide-text();
+        @size: 60px;
+
+        display: inline-block;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 2px solid @color-secondary;
+        width: @size;
+        height: @size;
+        border-radius: 50%;
+        display: block;
+        margin: 30px auto 0 auto;
+        position: relative;
+        z-index: 1;
+
+        &:focus {
+            outline: 0;
+            outline: thin dotted \9; /* IE6-9 */
+            outline: none;
+        }
+        
+        @media @mq-desktop {
+
+            .transition(background-color .3s);
+
+            &:hover{
+                background-color: @color-secondary;
+
+                i:before {
+                    color: @color-primary;
+                }
+            }
+        }
+    }
+    
+    @media @mq-desktop {
+        i:before{
+            .transition(color .3s);
+        }
+    }
+
+    i:before{
+        color: @color-secondary;
+        position: relative;
+        z-index: 0;
+    }
+}
+
+/* 8.8: Styling of the button class (.btn) */
+.btn{
+	color: @color-secondary;
+	border: 2px solid transparent;
+	display: inline-block;
+	border-radius: 1.4em;
+
+	a {
+		display: block;
+		padding: .7em 1.4em;
+		text-decoration: none;
+	}
+
+	* > {
+        .font-size(14);
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	&.active{
+		border-color: @color-primary;
+		* > {
+			color: @color-primary;
+		}
+	}
+
+	@media @mq-desktop {
+		&:hover{
+			color: @color-primary;
+		}
+	}
+}

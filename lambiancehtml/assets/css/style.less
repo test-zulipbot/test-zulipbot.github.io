@@ -1,0 +1,110 @@
+/*
+L'ambiance
+======================== TABLE OF CONTENTS ========================
+===================================================================
+1:  Mixins, normalize and browser fixes.
+2:  Typography and styling for typograpic elements used in Ambiance
+3:  Transitions & animations
+4:  Fonts inclusion
+5:  Photoswipe
+6:  Remodal: Modal styling and basic css
+7:  Selections and general setup
+8:  Forms / inputs and buttons
+9:  Figure & Gallery-item styling
+10: Homepage navigation (scrolling strokes)
+11: Homepage header (Which shows logo)
+12: Footer styling (Share buttons, author)
+13: Content: .content and .content-wrapper styling
+14: Lists: ol, ul, link-list, hours, icon-list & price list styling
+15: The background slideshow
+16: The overlay that covers the background
+17: The splash screen & animation
+18: Misc elements, helpers, posts & comments.
+===================================================================
+===================================================================
+
+*/
+//
+// Import colorscheme
+// --------------------------------------------------
+@import 'theme/colorscheme/default';
+@base-url: './assets/';
+
+//
+// A: Setup less
+// --------------------------------------------------
+@import 'common/mixins';
+@import 'common/normalize';
+@import 'common/normalize-opentype';
+@import 'common/variables';
+@import 'common/typography';
+@import 'theme/transitions';
+@import 'libs/font-sans';
+@import 'libs/font-serif';
+@import 'libs/font-display';
+@import 'libs/font-icons';
+@import 'libs/font-icons-social';
+@import 'libs/photoswipe/photoswipe';
+@import 'libs/remodal/remodal';
+
+/* --------------------------------------------
+
+7: Selections and general setup
+
+----------------------------------------------- */
+::selection {
+	background: @color-selection;
+	color: @color-primary;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: @color-selection;
+	color: @color-primary;
+	text-shadow: none;
+}
+/* 7.1: Define the html element and rules */
+html{
+	.transition(all .3s linear);
+	background-color: @color-background-body;
+	font: normal 62.5%/1em @font-sans;
+	height: 100%;
+	color: @color-primary;
+	overflow: hidden;
+	line-height: 1.7;
+}
+
+/* Define the body styling and rules */
+body{
+	width: 100%;
+	height: 100%;
+
+	main{
+		.font-size(14);
+		z-index: @z-index-main;
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+		overflow-y: scroll;
+
+		@media @mq-phone, @mq-phone-landscape, @mq-tablet{
+			-webkit-overflow-scrolling: touch;
+		}
+	}
+}
+
+@import 'elements/form';
+@import 'elements/figure';
+@import 'elements/nav';
+@import 'elements/header';
+@import 'elements/footer';
+@import 'elements/content';
+@import 'elements/list';
+@import 'elements/slideshow';
+@import 'elements/overlay';
+@import 'elements/splash.less';
+@import 'elements/misc';

@@ -1,0 +1,162 @@
+/* --------------------------------------------
+
+4.3: Fonts inclusion (Social incons) / Fontello custom selection
+
+----------------------------------------------- */
+@font-face {
+    font-family: 'fontello';
+    src: url('@{base-url}fonts/icons/fontello.eot?98850010');
+    src: url('@{base-url}fonts/icons/fontello.eot?98850010#iefix') format("embedded-opentype"),
+    url('@{base-url}fonts/icons/fontello.woff?98850010') format('woff'),
+    url('@{base-url}fonts/icons/fontello.ttf?98850010') format('truetype'),
+    url('@{base-url}fonts/icons/fontello?98850010#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.iconify-social(){
+
+    .font-size(18);
+
+    font-family: 'fontello';
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    white-space: nowrap;
+    speak: none;
+    line-height: 1;
+
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------
+
+4.3.1: Icon definitions for easy use
+
+----------------------------------------------- */
+.icon-social{
+
+    &:before{
+        .iconify-social();
+        color: @color-primary;
+    }
+
+    &.aim:before { content: '\e800'; }
+    &.delicious:before { content: '\e801'; }
+    &.paypal:before { content: '\e802'; }
+    &.flattr:before { content: '\e803'; }
+    &.android:before { content: '\e804'; }
+    &.eventful:before { content: '\e805'; }
+    &.smashmag:before { content: '\e806'; }
+    &.gplus:before { content: '\e807'; }
+    &.wikipedia:before { content: '\e808'; }
+    &.lanyrd:before { content: '\e809'; }
+    &.calendar:before { content: '\e80a'; }
+    &.stumbleupon:before { content: '\e80b'; }
+    &.fivehundredpx:before { content: '\e80c'; }
+    &.pinterest:before { content: '\e80d'; }
+    &.bitcoin:before { content: '\e80e'; }
+    &.w3c:before { content: '\e80f'; }
+    &.foursquare:before { content: '\e810'; }
+    &.html5:before { content: '\e811'; }
+    &.ie:before { content: '\e812'; }
+    &.call:before { content: '\e813'; }
+    &.grooveshark:before { content: '\e814'; }
+    &.ninetyninedesigns:before { content: '\e815'; }
+    &.forrst:before { content: '\e816'; }
+    &.digg:before { content: '\e817'; }
+    &.spotify:before { content: '\e818'; }
+    &.reddit:before { content: '\e819'; }
+    &.guest:before { content: '\e81a'; }
+    &.gowalla:before { content: '\e81b'; }
+    &.appstore:before { content: '\e81c'; }
+    &.blogger:before { content: '\e81d'; }
+    &.cc:before { content: '\e81e'; }
+    &.dribbble:before { content: '\e81f'; }
+    &.evernote:before { content: '\e820'; }
+    &.flickr:before { content: '\e821'; }
+    &.google:before { content: '\e822'; }
+    &.viadeo:before { content: '\e823'; }
+    &.instapaper:before { content: '\e824'; }
+    &.weibo:before { content: '\e825'; }
+    &.klout:before { content: '\e826'; }
+    &.linkedin:before { content: '\e827'; }
+    &.meetup:before { content: '\e828'; }
+    &.vk:before { content: '\e829'; }
+    &.plancast:before { content: '\e82a'; }
+    &.disqus:before { content: '\e82b'; }
+    &.rss:before { content: '\e82c'; }
+    &.skype:before { content: '\e82d'; }
+    &.twitter:before { content: '\e82e'; }
+    &.youtube:before { content: '\e82f'; }
+    &.vimeo:before { content: '\e830'; }
+    &.windows:before { content: '\e831'; }
+    &.xing:before { content: '\e832'; }
+    &.yahoo:before { content: '\e833'; }
+    &.chrome:before { content: '\e834'; }
+    &.email:before { content: '\e835'; }
+    &.macstore:before { content: '\e836'; }
+    &.myspace:before { content: '\e837'; }
+    &.podcast:before { content: '\e838'; }
+    &.amazon:before { content: '\e839'; }
+    &.steam:before { content: '\e83a'; }
+    &.cloudapp:before { content: '\e83b'; }
+    &.dropbox:before { content: '\e83c'; }
+    &.ebay:before { content: '\e83d'; }
+    &.facebook:before { content: '\e83e'; }
+    &.github:before { content: '\e83f'; }
+    &.github-circled:before { content: '\e840'; }
+    &.googleplay:before { content: '\e841'; }
+    &.itunes:before { content: '\e842'; }
+    &.plurk:before { content: '\e843'; }
+    &.songkick:before { content: '\e844'; }
+    &.lastfm:before { content: '\e845'; }
+    &.gmail:before { content: '\e846'; }
+    &.pinboard:before { content: '\e847'; }
+    &.openid:before { content: '\e848'; }
+    &.quora:before { content: '\e849'; }
+    &.soundcloud:before { content: '\e84a'; }
+    &.tumblr:before { content: '\e84b'; }
+    &.eventasaurus:before { content: '\e84c'; }
+    &.wordpress:before { content: '\e84d'; }
+    &.yelp:before { content: '\e84e'; }
+    &.intensedebate:before { content: '\e84f'; }
+    &.eventbrite:before { content: '\e850'; }
+    &.scribd:before { content: '\e851'; }
+    &.posterous:before { content: '\e852'; }
+    &.stripe:before { content: '\e853'; }
+    &.opentable:before { content: '\e854'; }
+    &.cart:before { content: '\e855'; }
+    &.print:before { content: '\e856'; }
+    &.angellist:before { content: '\e857'; }
+    &.instagram:before { content: '\e858'; }
+    &.dwolla:before { content: '\e859'; }
+    &.appnet:before { content: '\e85a'; }
+    &.statusnet:before { content: '\e85b'; }
+    &.acrobat:before { content: '\e85c'; }
+    &.drupal:before { content: '\e85d'; }
+    &.buffer:before { content: '\e85e'; }
+    &.pocket:before { content: '\e85f'; }
+    &.bitbucket:before { content: '\e860'; }
+    &.lego:before { content: '\e861'; }
+    &.login:before { content: '\e862'; }
+    &.stackoverflow:before { content: '\e863'; }
+    &.hackernews:before { content: '\e864'; }
+    &.lkdto:before { content: '\e865'; }
+    &.duckduckgo:before { content: '\e866'; }
+}

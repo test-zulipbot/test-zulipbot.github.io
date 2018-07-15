@@ -1,0 +1,92 @@
+/* --------------------------------------------
+
+17: The splash screen & animation
+
+----------------------------------------------- */
+
+#splash{
+
+    .transition(all @transition-speed @animation-bezier);
+
+    z-index: @z-index-splash;
+    background-color: @color-background-body;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &.hidden{
+        display: none;
+    }
+
+    /* 17.1: The markup for the loadbar and logo */
+    .loader{
+        position: absolute;
+        top: 45%;
+        width: 100%;
+
+        img{
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            opacity: 0;
+
+            .transition(opacity .5s linear);
+
+            &.visible{
+                opacity: 1;
+            }
+        }
+
+        .line{
+            width: 0;
+            height: 1px;
+            background-color: @color-secondary;
+
+            /* 17.2: The splash animation */
+            .animation(fadeInAnimation 2s);
+
+            @-webkit-keyframes fadeInAnimation {
+
+                0% {
+                    width: 0;
+                }
+                80% {
+                    width: 100%;
+                }
+                100% {
+                    width: 0;
+                }
+            }
+
+            @-moz-keyframes fadeInAnimation {
+
+                0% {
+                    width: 0;
+                }
+                80% {
+                    width: 100%;
+                }
+                100% {
+                    width: 0;
+                }
+            }
+
+            @keyframes fadeInAnimation {
+
+                0% {
+                    width: 0;
+                }
+                80% {
+                    width: 100%;
+                }
+                100% {
+                    width: 0;
+                }
+            }
+        }
+    }
+}

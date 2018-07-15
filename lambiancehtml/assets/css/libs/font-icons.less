@@ -1,0 +1,642 @@
+/* --------------------------------------------
+
+4.3: Fonts inclusion (line-icon font) / 77-Essential-icons fontface
+
+----------------------------------------------- */
+@icon-size: 32;
+
+@font-face {
+	font-family: '77-Essential-Icons';
+	src: url('@{base-url}fonts/icons/77-Essential-Icons.eot');
+	src: url('@{base-url}fonts/icons/77-Essential-Icons.eot?#iefix') format("embedded-opentype"),
+	url('@{base-url}fonts/icons/77-Essential-Icons.woff') format('woff'),
+	url('@{base-url}fonts/icons/77-Essential-Icons.ttf') format('truetype'),
+	url('@{base-url}fonts/icons/77-Essential-Icons.svg#77-Essential-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.iconify(){
+
+	.font-size(@icon-size);
+
+	font-family: '77-Essential-Icons';
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+	white-space: nowrap;
+	speak: none;
+	line-height: 1;
+	color: @color-icon-primary;
+
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------
+
+4.2.1: Icon definitions & styling for easy use
+
+----------------------------------------------- */
+.icon{
+
+	&.bg{
+        .transform(translateY(-50%));
+		@size: 60px;
+
+        position: relative;
+		display: inline-block;
+		width: @size;
+		height: @size;
+		border-radius: 50%;
+		background-color: @color-icon-background;
+
+		&:before{
+			line-height: @size;
+			vertical-align: middle;
+		}
+	}
+
+	&.inverted{
+		background-color: @color-icon-background-alt;
+
+		&:before{
+			color: @color-icon-secondary;
+		}
+	}
+
+	&:before{
+		.iconify();
+	}
+
+	&.icon-Food{
+		position: relative;
+
+		&:before{
+
+			.transform(translate(-50%, -50%));
+
+			margin-left: -2px;
+
+			content: "";
+			position: absolute;
+			width: @icon-size - 5px;
+			height: @icon-size - 5px;
+
+			top: 50%;
+			left: 55%;
+
+			background-image: url('@{base-url}img/interface/knive-fork.svg');
+			background-size: cover;
+		}
+	}
+
+	&.icon-Plus{
+		&:before{
+			content: @icon-Plus;
+		}
+	}
+
+	&.icon-Attachment{
+		&:before{
+			content: @icon-Attachment;
+		}
+	}
+
+	&.icon-Reply{
+		&:before{
+			content: @icon-Reply;
+		}
+	}
+
+	&.icon-BarGraph{
+		&:before{
+			content: @icon-BarGraph;
+		}
+	}
+
+	&.icon-Book{
+		&:before{
+			content: @icon-Book;
+		}
+	}
+
+	&.icon-Bookmark{
+		&:before{
+			content: @icon-Bookmark;
+		}
+	}
+
+	&.icon-Briefcase{
+		&:before{
+			content: @icon-Briefcase;
+		}
+	}
+
+	&.icon-BrowserWindow{
+		&:before{
+			content: @icon-BrowserWindow;
+		}
+	}
+
+	&.icon-Calendar{
+		&:before{
+			content: @icon-Calendar;
+		}
+	}
+
+	&.icon-Camera{
+		&:before{
+			content: @icon-Camera;
+		}
+	}
+
+	&.icon-Cancel{
+		&:before{
+			content: @icon-Cancel;
+		}
+	}
+
+	&.icon-Clock{
+		&:before{
+			content: @icon-Clock;
+		}
+	}
+
+	&.icon-CommentwithLines{
+		&:before{
+			content: @icon-CommentwithLines;
+		}
+	}
+
+	&.icon-Comment{
+		&:before{
+			content: @icon-Comment;
+		}
+	}
+
+	&.icon-Computer{
+		&:before{
+			content: @icon-Computer;
+		}
+	}
+
+	&.icon-Controls{
+		&:before{
+			content: @icon-Controls;
+		}
+	}
+
+	&.icon-Conversation{
+		&:before{
+			content: @icon-Conversation;
+		}
+	}
+
+	&.icon-CreditCard{
+		&:before{
+			content: @icon-CreditCard;
+		}
+	}
+
+	&.icon-Crosshair{
+		&:before{
+			content: @icon-Crosshair;
+		}
+	}
+
+	&.icon-Diary{
+		&:before{
+			content: @icon-Diary;
+		}
+	}
+
+	&.icon-DownArrow{
+		&:before{
+			content: @icon-DownArrow;
+		}
+	}
+
+	&.icon-Email{
+		&:before{
+			content: @icon-Email;
+		}
+	}
+
+	&.icon-Folder{
+		&:before{
+			content: @icon-Folder;
+		}
+	}
+
+	&.icon-Forward{
+		&:before{
+			content: @icon-Forward;
+		}
+	}
+
+	&.icon-Heart{
+		&:before{
+			content: @icon-Heart;
+		}
+	}
+
+	&.icon-Home{
+		&:before{
+			content: @icon-Home;
+		}
+	}
+
+	&.icon-Inbox{
+		&:before{
+			content: @icon-Inbox;
+		}
+	}
+
+	&.icon-Layers{
+		&:before{
+			content: @icon-Layers;
+		}
+	}
+
+	&.icon-LeftArrow{
+		&:before{
+			content: @icon-LeftArrow;
+		}
+	}
+
+	&.icon-Link{
+		&:before{
+			content: @icon-Link;
+		}
+	}
+
+	&.icon-List{
+		&:before{
+			content: @icon-List;
+		}
+	}
+
+	&.icon-LocationMarker{
+		&:before{
+			content: @icon-LocationMarker;
+		}
+	}
+
+	&.icon-Location{
+		&:before{
+			content: @icon-Location;
+		}
+	}
+
+	&.icon-Map{
+		&:before{
+			content: @icon-Map;
+		}
+	}
+
+	&.icon-Medal{
+		&:before{
+			content: @icon-Medal;
+		}
+	}
+
+	&.icon-Menu{
+		&:before{
+			content: @icon-Menu;
+		}
+	}
+
+	&.icon-Microphone{
+		&:before{
+			content: @icon-Microphone;
+		}
+	}
+
+	&.icon-Minus{
+		&:before{
+			content: @icon-Minus;
+		}
+	}
+
+	&.icon-Options{
+		&:before{
+			content: @icon-Options;
+		}
+	}
+
+	&.icon-MoreOptions{
+		&:before{
+			content: @icon-MoreOptions;
+		}
+	}
+
+	&.icon-Music{
+		&:before{
+			content: @icon-Music;
+		}
+	}
+
+	&.icon-Mute{
+		&:before{
+			content: @icon-Mute;
+		}
+	}
+
+	&.icon-Notification{
+		&:before{
+			content: @icon-Notification;
+		}
+	}
+
+	&.icon-Padlock{
+		&:before{
+			content: @icon-Padlock;
+		}
+	}
+
+	&.icon-Document{
+		&:before{
+			content: @icon-Document;
+		}
+	}
+
+	&.icon-Phone{
+		&:before{
+			content: @icon-Phone;
+		}
+	}
+
+	&.icon-Photo{
+		&:before{
+			content: @icon-Photo;
+		}
+	}
+
+	&.icon-PieChart{
+		&:before{
+			content: @icon-PieChart;
+		}
+	}
+
+	&.icon-Pin{
+		&:before{
+			content: @icon-Pin;
+		}
+	}
+
+	&.icon-View{
+		&:before{
+			content: @icon-View;
+		}
+	}
+
+	&.icon-Printer{
+		&:before{
+			content: @icon-Printer;
+		}
+	}
+
+	&.icon-Profile{
+		&:before{
+			content: @icon-Profile;
+		}
+	}
+
+	&.icon-Rearrange{
+		&:before{
+			content: @icon-Rearrange;
+		}
+	}
+
+	&.icon-Refresh{
+		&:before{
+			content: @icon-Refresh;
+		}
+	}
+
+	&.icon-RightArrow{
+		&:before{
+			content: @icon-RightArrow;
+		}
+	}
+
+	&.icon-Save{
+		&:before{
+			content: @icon-Save;
+		}
+	}
+
+	&.icon-Search{
+		&:before{
+			content: @icon-Search;
+		}
+	}
+
+	&.icon-Settings{
+		&:before{
+			content: @icon-Settings;
+		}
+	}
+
+	&.icon-Share{
+		&:before{
+			content: @icon-Share;
+		}
+	}
+
+	&.icon-Shop{
+		&:before{
+			content: @icon-Shop;
+		}
+	}
+
+	&.icon-Signals{
+		&:before{
+			content: @icon-Signals;
+		}
+	}
+
+	&.icon-Signal{
+		&:before{
+			content: @icon-Signal;
+		}
+	}
+
+	&.icon-Volume{
+		&:before{
+			content: @icon-Volume;
+		}
+	}
+
+	&.icon-Star{
+		&:before{
+			content: @icon-Star;
+		}
+	}
+
+	&.icon-iPad{
+		&:before{
+			content: @icon-iPad;
+		}
+	}
+
+	&.icon-Tag{
+		&:before{
+			content: @icon-Tag;
+		}
+	}
+
+	&.icon-Checkmark{
+		&:before{
+			content: @icon-Checkmark;
+		}
+	}
+
+	&.icon-Toggle{
+		&:before{
+			content: @icon-Toggle;
+		}
+	}
+
+	&.icon-Trash{
+		&:before{
+			content: @icon-Trash;
+		}
+	}
+
+	&.icon-Typing{
+		&:before{
+			content: @icon-Typing;
+		}
+	}
+
+	&.icon-UpArrow{
+		&:before{
+			content: @icon-UpArrow;
+		}
+	}
+
+	&.icon-User{
+		&:before{
+			content: @icon-User;
+		}
+	}
+
+	&.icon-Users{
+		&:before{
+			content: @icon-Users;
+		}
+	}
+
+	&.icon-VideoCamera{
+		&:before{
+			content: @icon-VideoCamera;
+		}
+	}
+
+	&.icon-Video{
+		&:before{
+			content: @icon-Video;
+		}
+	}
+
+	&.icon-Warning{
+		&:before{
+			content: @icon-Warning;
+		}
+	}
+
+	&.icon-CreateNew{
+		&:before{
+			content: @icon-CreateNew;
+		}
+	}
+}
+
+@icon-Plus: "\2b";
+@icon-Attachment: "\61";
+@icon-Reply: "\72";
+@icon-BarGraph: "\67";
+@icon-Book: "\52";
+@icon-Bookmark: "\42";
+@icon-Briefcase: "\62";
+@icon-BrowserWindow: "\77";
+@icon-Calendar: "\63";
+@icon-Camera: "\43";
+@icon-Cancel: "\78";
+@icon-Clock: "\74";
+@icon-CommentwithLines: "\6d";
+@icon-Comment: "\4d";
+@icon-Computer: "\31";
+@icon-Controls: "\53";
+@icon-Conversation: "\73";
+@icon-CreditCard: "\a3";
+@icon-Crosshair: "\54";
+@icon-Diary: "\6e";
+@icon-DownArrow: "\64";
+@icon-Email: "\65";
+@icon-Folder: "\66";
+@icon-Forward: "\46";
+@icon-Heart: "\33";
+@icon-Home: "\68";
+@icon-Inbox: "\44";
+@icon-Layers: "\4c";
+@icon-LeftArrow: "\3c";
+@icon-Link: "\6c";
+@icon-List: "\3a";
+@icon-LocationMarker: "\50";
+@icon-Location: "\4b";
+@icon-Map: "\71";
+@icon-Medal: "\48";
+@icon-Menu: "\3d";
+@icon-Microphone: "\41";
+@icon-Minus: "\2d";
+@icon-Options: "\6f";
+@icon-MoreOptions: "\4f";
+@icon-Music: "\4e";
+@icon-Mute: "\58";
+@icon-Notification: "\6a";
+@icon-Padlock: "\6b";
+@icon-Document: "\57";
+@icon-Phone: "\69";
+@icon-Photo: "\70";
+@icon-PieChart: "\47";
+@icon-Pin: "\4a";
+@icon-View: "\531";
+@icon-Printer: "\532";
+@icon-Profile: "\533";
+@icon-Rearrange: "\7a";
+@icon-Refresh: "\7e";
+@icon-RightArrow: "\3e";
+@icon-Save: "\79";
+@icon-Search: "\59";
+@icon-Settings: "\32";
+@icon-Share: "\40";
+@icon-Shop: "\51";
+@icon-Signals: "\7b";
+@icon-Signal: "\7c";
+@icon-Volume: "\5a";
+@icon-Star: "\2a";
+@icon-iPad: "\49";
+@icon-Tag: "\45";
+@icon-Checkmark: "\2f";
+@icon-Toggle: "\60";
+@icon-Trash: "\5f";
+@icon-Typing: "\2e";
+@icon-UpArrow: "\5e";
+@icon-User: "\75";
+@icon-Users: "\55";
+@icon-VideoCamera: "\56";
+@icon-Video: "\76";
+@icon-Warning: "\21";
+@icon-CreateNew: "\7d";

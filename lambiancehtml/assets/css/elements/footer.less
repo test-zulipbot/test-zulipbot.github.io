@@ -1,0 +1,83 @@
+/* --------------------------------------------
+
+12: Footer styling (Share buttons, author)
+
+----------------------------------------------- */
+footer{
+
+	text-align: left;
+
+	.author{
+
+		span{
+			display: block;
+
+			&.author{
+				.font-size(18);
+			}
+
+			&.date{
+				.font-size(13);
+			}
+		}
+	}
+
+	section{
+
+		/* 12.1: The share area of the footer */
+		&.share{
+
+			padding: 0;
+			text-align: left;
+
+			h5{
+				margin: 0;
+				line-height: 2;
+				vertical-align: middle;
+				color: @color-secondary;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				display: inline-block;
+			}
+
+			ul{
+				list-style: none;
+				margin: 0;
+				padding: 0 0 0 10px;
+				display: inline-block;
+
+				li{
+					display: inline-block;
+					padding: 5px;
+
+					a{
+						.transition(all .5s @animation-bezier);
+
+						position: relative;
+						display: block;
+
+						span{
+							.hide-text();
+						}
+
+                        i{
+                            padding: 5px;
+                        }
+
+						@media @mq-desktop{
+
+							&:hover{
+                                .scale(1.6);
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+
+	h4, h3{
+		color: @color-secondary;
+	}
+}

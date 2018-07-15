@@ -1,0 +1,88 @@
+/* --------------------------------------------
+
+3: Transitions & Animations
+
+----------------------------------------------- */
+
+@transition-speed: 1s;
+
+.transition{
+	.transition(opacity @transition-speed);
+	opacity: 1;
+}
+
+.transition-in{
+	opacity: 0;
+}
+
+.transition-out{
+
+	opacity: 0;
+}
+
+.fade{
+	.transition(opacity @transition-speed);
+	opacity: 1;
+}
+
+.fade-in{
+	opacity: 0;
+}
+
+.fade-out{
+	opacity: 0;
+}
+
+// Slide from top animation
+.slide-from-top{
+	.transition(transform @transition-speed @animation-bezier);
+	.transform(translateY(0));
+}
+
+.slide-from-top-in{
+	.transform(translateY(-100%));
+}
+
+.slide-from-top-out{
+	.transform(translateY(100%));
+}
+
+// slide to top animation
+.slide-to-top{
+	.transition(transform @transition-speed @animation-bezier);
+	.transform(translateY(0));
+}
+
+.slide-to-top-in{
+	.transform(translateY(100%));
+}
+
+.slide-to-top-out{
+	.transform(translateY(-100%));
+}
+
+// slide left animation
+.slide-left{
+	.transition(transform @transition-speed @animation-bezier);
+	.transform(translateX(0));
+}
+
+.slide-left-in{
+	.transform(translateX(100%));
+	overflow: hidden;
+}
+
+.slide-left-out{
+	.transform(translateX(-100%));
+	overflow: hidden;
+}
+
+.splash-transition{
+    .transform(translateY(100%));
+}
+
+.splash-transition-out{
+    .transition(transform @transition-speed @animation-bezier);
+    .transform(translateY(0));
+}
+

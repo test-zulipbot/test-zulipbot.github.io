@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Ajax &amp; transitions | A how-to guide to get the most out of your new template.</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.6">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./background.html" />
+    
+    
+    <link rel="prev" href="./colors.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="7"
+        data-chapter-title="Ajax &amp; transitions"
+        data-filepath="ajax.md"
+        data-basepath="."
+        data-revision="Wed Oct 19 2016 21:02:16 GMT+0200 (CEST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="filestructure.html">
+            
+                
+                    <a href="./filestructure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        File structure
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="assets.html">
+            
+                
+                    <a href="./assets.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Assets
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="homenavigation.html">
+            
+                
+                    <a href="./homenavigation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Home navigation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="preloaderlogo.html">
+            
+                
+                    <a href="./preloaderlogo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Preloader &amp; Logo
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="fontsicons.html">
+            
+                
+                    <a href="./fontsicons.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Fonts &amp; Icons
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="colors.html">
+            
+                
+                    <a href="./colors.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Colors
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7" data-path="ajax.html">
+            
+                
+                    <a href="./ajax.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Ajax &amp; transitions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="background.html">
+            
+                
+                    <a href="./background.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Background
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >A how-to guide to get the most out of your new template.</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h3 id="pages-are-loaded-via-ajax">Pages are loaded via ajax.</h3>
+<p>It&apos;s possible however for a viewer to navigate to a sub page directly. In order to make sure this works you always have to make sure that your javascript files are included at the bottom of each and every sub page.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/libs/history.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/libs/modernizr.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/libs/page.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/libs/jquery-2.1.4.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/libs/backgroundvideo/backgroundvideo.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/libs/photoswipe/photoswipe.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/libs/photoswipe/photoswipe-ui-default.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/libs/remodal/remodal.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/custom/slidenavigation.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://localhost/ambiance/output_dev/assets/js/app.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<h3 id="page-linking">Page linking.</h3>
+<p>A page is animated into the screen after it&apos;s loaded. You can tell Ambiance what transition to use by setting a <code>data-transition</code> property on the href that links to your next screen:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;/&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;back&quot;</span> <span class="hljs-attribute">data-transition</span>=<span class="hljs-value">&quot;slide-from-top&quot;</span>&gt;</span>
+</code></pre>
+<p>L&apos;ambiance will automatically add and -in and -out class to your chosen transition.</p>
+<p>We predefined transitions. But you can also define your own transitions.
+Have a look at <code>transitions.less</code> or line 602 of <code>style.css</code>  </p>
+<pre><code class="lang-css"><span class="hljs-class">.slide-from-top</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transition</span>:<span class="hljs-value"> transform <span class="hljs-number">0.8s</span> <span class="hljs-function">cubic-bezier</span>(<span class="hljs-number">0.4</span>, <span class="hljs-number">0.01</span>, <span class="hljs-number">0.165</span>, <span class="hljs-number">0.99</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> transform <span class="hljs-number">0.8s</span> <span class="hljs-function">cubic-bezier</span>(<span class="hljs-number">0.4</span>, <span class="hljs-number">0.01</span>, <span class="hljs-number">0.165</span>, <span class="hljs-number">0.99</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">0</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">0</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">0</span>)</span></span>;
+}</span>
+<span class="hljs-class">.slide-from-top-in</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(-<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(-<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(-<span class="hljs-number">100%</span>)</span></span>;
+}</span>
+<span class="hljs-class">.slide-from-top-out</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">100%</span>)</span></span>;
+}</span>
+<span class="hljs-class">.slide-to-top</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transition</span>:<span class="hljs-value"> transform <span class="hljs-number">0.8s</span> <span class="hljs-function">cubic-bezier</span>(<span class="hljs-number">0.4</span>, <span class="hljs-number">0.01</span>, <span class="hljs-number">0.165</span>, <span class="hljs-number">0.99</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> transform <span class="hljs-number">0.8s</span> <span class="hljs-function">cubic-bezier</span>(<span class="hljs-number">0.4</span>, <span class="hljs-number">0.01</span>, <span class="hljs-number">0.165</span>, <span class="hljs-number">0.99</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">0</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">0</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">0</span>)</span></span>;
+}</span>
+<span class="hljs-class">.slide-to-top-in</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(<span class="hljs-number">100%</span>)</span></span>;
+}</span>
+<span class="hljs-class">.slide-to-top-out</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(-<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(-<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateY</span>(-<span class="hljs-number">100%</span>)</span></span>;
+}</span>
+<span class="hljs-class">.slide-left</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transition</span>:<span class="hljs-value"> transform <span class="hljs-number">0.8s</span> <span class="hljs-function">cubic-bezier</span>(<span class="hljs-number">0.4</span>, <span class="hljs-number">0.01</span>, <span class="hljs-number">0.165</span>, <span class="hljs-number">0.99</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> transform <span class="hljs-number">0.8s</span> <span class="hljs-function">cubic-bezier</span>(<span class="hljs-number">0.4</span>, <span class="hljs-number">0.01</span>, <span class="hljs-number">0.165</span>, <span class="hljs-number">0.99</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(<span class="hljs-number">0</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(<span class="hljs-number">0</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(<span class="hljs-number">0</span>)</span></span>;
+}</span>
+<span class="hljs-class">.slide-left-in</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(<span class="hljs-number">100%</span>)</span></span>;
+}</span>
+<span class="hljs-class">.slide-left-out</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(-<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(-<span class="hljs-number">100%</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(-<span class="hljs-number">100%</span>)</span></span>;
+}</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./colors.html" class="navigation navigation-prev " aria-label="Previous page: Colors"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./background.html" class="navigation navigation-next " aria-label="Next page: Background"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

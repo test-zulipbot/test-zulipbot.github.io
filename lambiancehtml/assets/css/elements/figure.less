@@ -1,0 +1,87 @@
+
+/* --------------------------------------------
+
+9: Figure & Gallery-item styling
+
+----------------------------------------------- */
+.gallery-item {
+    @radius: 3px;
+    border-radius: @radius;
+    overflow: hidden;
+    display: block;
+
+    figure {
+        margin: 0;
+    }
+}
+
+figure{
+
+    margin: 35px 0 20px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+    }
+
+    a{
+        position: relative;
+    }
+
+    figcaption{
+        .bb();
+
+        width: 100%;
+        background-color: @color-image-caption-background;
+        padding: 20px 30px;
+        text-align: left;
+        color: @color-primary;
+        overflow: hidden;
+
+        h3{
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0;
+            color: @color-image-cpation-text;
+        }
+
+        p{
+            margin: 0;
+            color: @color-secondary;
+        }
+
+        i{
+            display: none;
+        }
+    }
+
+    @media @mq-desktop{
+
+        figcaption{
+
+            .transform(translateY(100%));
+            .transition(transform .5s @animation-bezier);
+            position: absolute;
+            bottom: 0;
+
+            i{
+                .transform(translateY(-50%));
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+            }
+        }
+
+        &:hover{
+
+            figcaption{
+                .transform(translateY(0));
+            }
+        }
+
+    }
+}

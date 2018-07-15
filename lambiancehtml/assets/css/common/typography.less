@@ -1,0 +1,164 @@
+/* --------------------------------------------
+
+2: Typography and styling for typograpic elements used in Ambiance
+
+----------------------------------------------- */
+
+@fontsize-h1: 38;
+@fontsize-h2: 26;
+@fontsize-h3: 21;
+@fontsize-h4: 16;
+@fontsize-h5: 14;
+@fontsize-h6: 10;
+@fontsize-display: 48;
+@fontsize-p: 15;
+
+/* 2.1: Add font smoothing to typographic elements */
+p, span, a, h1, h2, h3, h4, h5, strong{
+	.font-smoothing();
+}
+
+/* 2.2: Set lineheights and margins for elements*/
+h1, h2, h3, h4, h5, h6, p, span{
+	line-height: 1.2;
+	margin: 0 0 .35em 0;
+}
+
+/* 2.3: Set paragraph properties */
+p{
+	line-height: 1.7em;
+	text-align: left;
+	margin: 20px 0;
+}
+
+/* 2.4: General header styling */
+h1{
+	.font-size(@fontsize-h1);
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, .4);
+	font-weight: 700;
+}
+
+h2{
+	.font-size(@fontsize-h2);
+	font-weight: 700;
+}
+
+h3{
+	.font-size(@fontsize-h3);
+}
+
+h4{
+	.font-size(@fontsize-h4);
+}
+
+h5{
+	.font-size(@fontsize-h5);
+}
+
+h6{
+	.font-size(@fontsize-h6);
+}
+
+p, span{
+	.font-size(@fontsize-p);
+}
+
+/* 2.5: Style anchors in lists and paragraphs */
+p, ul, ol {
+	a {
+		text-decoration: underline;
+	}
+}
+
+/* 2.6: Basic anchor styling and transitions */
+a{
+	text-decoration: none;
+	color: @color-link;
+
+	@media @mq-desktop{
+
+		.transition(color @transition-speed);
+
+		&:hover{
+			color: @color-link-hover;
+		}
+	}
+}
+
+/* 2.7: Serif helper class */
+.serif{
+	letter-spacing: 1px;
+	font-family: @font-serif;
+	color: @color-secondary;
+}
+
+/* 2.8: Styling for the signature shown in the footer */
+.signature{
+	padding: 20px 0;
+	text-align: left;
+
+	h6{
+		text-transform: uppercase;
+		color: @color-secondary;
+		letter-spacing: 2px;
+		margin: 0;
+	}
+
+	h5{
+		.font-size(@fontsize-display);
+		font-family: @font-display;
+		margin: 0 0 0 0;
+	}
+
+	&.center{
+		text-align: center;
+	}
+}
+
+/* 2.9: Blockquote styling */
+blockquote{
+
+	border-left: 2px solid @color-secondary;
+	margin: 40px 0 40px 30px;
+	padding-left: 10px;
+	line-height: 1.8;
+
+	p{
+		.font-size(28);
+		color: @color-secondary;
+		font-family: @font-serif;
+		letter-spacing: 1px;
+		opacity: 1;
+		margin: 0;
+	}
+}
+
+/* 2.10: Styling for badges (element with background) and rounded corners */
+.badge{
+	.font-size(14);
+	letter-spacing: 1px;
+	display: inline-block;
+	padding: .6em 1em;
+	border-radius: 1em;
+	line-height: 1.1em;
+	background-color: @color-badge-background;
+	color: @color-badge-text;
+    margin: 10px 0;
+}
+
+.badge-rounded {
+	display: inline-block;
+	padding: .6em .9em;
+	background: @color-badge-background;
+	border-radius: 1em;
+}
+
+/* 2.11: Styling for the icon show with the date */
+.date-icon {
+	&:before {
+		.iconify();
+		content: @icon-Clock;
+		vertical-align: middle;
+		margin-right: .3em;
+	}
+}
